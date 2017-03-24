@@ -1,3 +1,11 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+const browserHistory = require('react-router').browserHistory; 
+
+import Routes from './routes';
+
+
+
 const React = require('react');
 const ReactDOM = require('react-dom');
 const YearBook = require('./components/YearBook');
