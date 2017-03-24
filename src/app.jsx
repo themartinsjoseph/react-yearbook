@@ -5,11 +5,11 @@ const browserHistory = require('react-router').browserHistory;
 import Routes from './routes';
 
 
-
 const React = require('react');
 const ReactDOM = require('react-dom');
 const YearBook = require('./components/YearBook');
 const PersonShow = require('./components/PersonShow');
+
 
 const App = React.createClass({
   render: function() {
@@ -19,9 +19,18 @@ const App = React.createClass({
         <YearBook />
         <h1>PersonShow Component (Hardcoded to Person 0)</h1>
         <PersonShow />
+          <Router>
+            // Each route is defined with Route
+            <Route path="/" component={Home}/>
+            <Route path="/Person" component={Person}/>
+            <Route path="/Personshow" component={PersonShow}/>
+            <Route path="/Yearbook" component={YearBook}/>
+          </Router>
       </div>
     );
   }
 });
+
+
 
 ReactDOM.render(<App />, document.getElementById('container'));
